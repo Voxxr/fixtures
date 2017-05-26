@@ -3,7 +3,7 @@
 # Site wide configuration
 ####################################
 #
-title: Leonids
+title: Fixtures
 email:
 description: A simple and awesome blog theme powered by jekyll.
 url: https://voxxr.github.io/fixtures # the base hostname & protocol for your site
@@ -15,7 +15,7 @@ url: https://voxxr.github.io/fixtures # the base hostname & protocol for your si
 ####################################
 #
 timezone:          Europe/Paris
-markdown:          kramdown
+#markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
 permalink:         /articles/:year-:month/:title
