@@ -1,61 +1,36 @@
 ---
 layout: default
-lang: en
 ---
 
-<div class="home">
-  <section class="banner">
-    <div class="wrapper">
-      <h1>Fixtures</h1>
-      <p>{{ site.description }}</p>
-    </div>
-  </section>
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-  <div class="wrapper">
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-      <div>
-        <h2>Introduction</h2>
-        <p>This library allows you to (de-)serialize data of any complexity. Currently, it supports XML, JSON, and YAML.</p>
-
-        <p>It also provides you with a rich tool-set to adapt the output to your specific needs.</p>
-
-        <p>Built-in features include:</p>
-
-        <ul>
-          <li>(De-)serialize data of any complexity; circular references are handled gracefully.</li>
-          <li>Supports many built-in PHP types (such as dates)</li>
-          <li>Integrates with Doctrine ORM, et. al.</li>
-          <li>Supports versioning, e.g. for APIs</li>
-          <li>Configurable via PHP, XML, YAML, or Doctrine Annotations</li>
-        </ul>
-      </div>
-
-      <div>
-        <div>
-          <h2>Installation</h2>
-          <p></p>
-       </div>
-      </div>
-    
-      <div>
-        <div>
-          <h2>Usage</h2>
-          <p></p>
-        </div>
-      </div>
-    
-      <div>
-        <div>
-          <h2>Documentation</h2>
-          <p></p>
-        </div>
-      </div>
-
-      <div>
-        <div>
-          <h2>License</h2>
-          <p></p>
-        </div>
-      </div>
+    {{ post.content }}
   </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
 </div>
