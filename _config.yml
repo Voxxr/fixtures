@@ -8,6 +8,11 @@ email:
 description: A simple and awesome blog theme powered by jekyll.
 url: https://voxxr.github.io/fixtures # the base hostname & protocol for your site
 
+menu:
+  - url: /
+    name: main
+  - url: /blog
+    name: blog
 
 #
 ###################################
