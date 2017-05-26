@@ -33,9 +33,9 @@ kramdown:
 ####################################
 #
 owner:
-  name: Leonids
+  name: Fixtures
   avatar: leonids-logo.png
-  job: "A jekyll theme"
+  job: "Simple Data Seeding "
   bio: "A simple and awesome blog theme powered by jekyll."
   email:
   disqus-shortname:
