@@ -1,0 +1,170 @@
+# Site settings
+title: Voxxr Fixtures
+short_title: Fixtures
+description: |
+  Programmatic datasource seeding
+baseurl: ""
+url: "" # the base hostname & protocol for your site
+github_username:  voxxr
+github_repo:  fixtures
+paypal: 
+contact: 
+
+gems:
+  - jekyll-redirect-from
+
+devs:
+  -
+      name: Anthony Howell
+      github: anthonyhowell
+
+
+
+# Build settings
+markdown: kramdown
+
+permalink: pretty
+
+languages:
+
+  -
+    - en
+    - English
+
+
+toc:
+  - guide
+    - introduction
+    - why-open-data
+    - what-is-open-data
+    - how-to-open-up-data
+    - following-up
+    - events
+    - glossary
+    - appendices
+  - value-stories
+  - resources
+  - credits
+
+meta:
+  resources:
+    label: resources
+    output: true
+    has_translation: false
+    title: Open Data Resources
+    filters:
+      - Topic
+      - Language
+      - Region
+      - MediaType
+  value-stories:
+    label: value-stories
+    output: true
+    has_translation: true
+    title: Open Data Value Stories
+    languages:
+      - en
+  glossary:
+    label: glossary
+    output: true
+    has_translation: true
+    translate_link: true
+    title: Open Data Glossary
+    languages:
+      - en
+  guide:
+    label: guide
+    output: true
+    has_translation: true
+    translate_link: true
+    title: Guide
+    languages:
+      - en
+    toc:
+      entry_point: 'introduction'
+      order:
+        - introduction
+        - why-open-data
+        - what-is-open-data
+        - how-to-open-up-data
+        - following-up
+        - events
+        - glossary
+        - appendices
+      chapters:
+        - title: 'Introduction'
+          slug: 'introduction'
+          sections:
+            - title: 'Target Audience'
+              slug: 'target-audience'
+            - title: 'Credits'
+              slug: 'credits'
+        - title: 'Why Open Data?'
+          slug: 'why-open-data'
+        - title: 'What is Open Data?'
+          slug: 'what-is-open-data'
+        - title: 'How to Open Up Data'
+          slug: 'how-to-open-up-data'
+        - title: "So I've Opened Up Some Data, Now What? "
+          slug: 'following-up'
+        - title: "Make data social"
+          slug: 'events'
+        - title: 'Appendices'
+          slug: 'appendices'
+  contribute:
+    label: contribute
+    output: true
+    title: Contribute
+    has_translation: false
+    toc:
+      chapters:
+        - title: 'Contributing To The Handbook'
+        - title: 'Adding A Page'
+          slug: 'adding'
+        - title: 'Editing A Page'
+          slug: 'editing'
+        - title: 'Adding A Term To The Glossary'
+          slug: 'add-term'
+        - title: 'Adding A Resource To The Library'
+          slug: 'add-resource'
+        - title: 'Translating The Guide'
+          slug: 'translate-guide'
+        - title: 'Translating The Glossary'
+          slug: 'translate-glossary'
+        - title: 'Markdown Examples'
+          slug: 'markdown-examples'
+
+defaults:
+  -
+    scope: #this should be removed once more specific paths are defined
+      path: ""
+    values:
+      lang: en
+      layout: page
+  -
+    scope:
+      path: "guide"
+    values:
+      lang: en
+      layout: page
+      edit: true
+  -
+    scope:
+      path: "contribute"
+    values:
+      lang: en
+      section: contribute
+      layout: docs
+      edit: true
+  -
+    scope:
+      path: "value-stories"
+    values:
+      edit: true
+  -
+    scope:
+      section: "terms"
+    values:
+      layout: page
+      edit: true
+
