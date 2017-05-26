@@ -1,7 +1,7 @@
 theme: jekyll-theme-tactile
 
 # Site settings
-title: Voxxr Fixtures
+title: Fixtures
 short_title: Fixtures
 description: |
   Programmatic datasource seeding
